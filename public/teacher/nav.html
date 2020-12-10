@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="../../images/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<div>
+    <button onclick="goBack()" class="backbtn" style="background-color: #1e8dd6;padding:1px;">Back</button>
+</div>
+
+
+
+<div class="navbar"> 
+	<ul>
+		<li>
+			<form name="logout" action="../../src/logout.php" method="POST">
+				<input type="submit" value="LOGOUT" name="logout" style="font-family: 'Playfair Display', serif;">
+			</form>
+		</li>
+	</ul>
+</div>
+<div class="wrap">
+    <img src="../../images/logo.png" width="100" height="100">
+<div class="menu">
+    <ul>
+        <li><a href="Tcr_dashboard2.php">Dashboard</a></li>
+        <li><a href="Tcr_profile.php">Profile</a></li>
+        <li><a href="newsfeed2.php">NewsFeed</a></li>
+        <li><a href="Tcr_RequestEdits2.php">Request Edits</a></li> 
+        
+       
+        <li class="drop"><div class="drop" id="drop"> Inquiries and Replies<i class="fa fa-angle-down"></i> </div></li>
+            <div class="submenu" id="submenu">
+            <ul>
+                <li><a href="inquiries2.php">View Inquiries</a></li>
+                <li><a href="Tcr_AddInquiery2.php">Add Inquiery</a></li>
+                <li><a href="Tcr_ReplyInquiery2.php">Reply Inquiery</a></li>
+                
+            </ul>
+		   </div>
+    </ul>
+   
+</div> 
+</div>
+
+<script>
+
+var menu = document.getElementById("drop");
+var submenu = document.getElementById("submenu");
+
+
+    submenu.style.display = "none";
+
+
+menu.onclick = function(event) {
+    if (submenu.style.display === "none") {
+        submenu.style.display = "block";
+    } else {
+        submenu.style.display = "none";
+    }
+}
+
+
+</script>
